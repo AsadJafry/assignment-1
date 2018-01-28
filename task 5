@@ -1,0 +1,39 @@
+Sub Main()
+        Dim mid As Integer
+        Dim mname As String
+        Dim phoneno As Integer
+        Dim mdate As Date
+        Dim found As Boolean
+        found = False
+      
+        FileOpen(1, "c:\pg\mdata.txt", OpenMode.Input)
+        FileOpen(2, "c:\pg\mdata2.txt", OpenMode.Output)
+
+        While Not EOF(1)
+
+            Input(1, mid)
+            Input(1, mname)
+
+            Console.WriteLine("Member id:" & mid)
+            Console.WriteLine("Member name:" & mname)
+            Console.WriteLine("Enter phone number:")
+            phoneno = Console.ReadLine
+            Console.WriteLine("enter date of member ship:")
+            mdate = Console.ReadLine
+
+
+            WriteLine(2, mid)
+            WriteLine(2, mname)
+            WriteLine(2, phoneno)
+            WriteLine(2, mdate)
+
+        End While
+        FileClose(1)
+        FileClose(2)
+        Console.ReadKey()
+
+
+
+
+    End Sub
+End Module
