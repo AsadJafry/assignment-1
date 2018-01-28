@@ -1,0 +1,15 @@
+Sub Main()
+        Dim mid As Integer
+        Dim mname As String
+        FileOpen(1, "c:\pg\mdata.txt", OpenMode.Output)
+        Do
+            Console.Write("Enter ID:")
+            mid = Console.ReadLine()
+            Console.Write("Enter Name:")
+            mname = Console.ReadLine
+            WriteLine(1, mid)
+            WriteLine(1, mname)
+        Loop Until mid = "0"
+        FileClose(1)
+
+   End Sub
