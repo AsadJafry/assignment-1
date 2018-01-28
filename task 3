@@ -1,0 +1,26 @@
+Sub Main()
+        Dim mid As Integer
+        Dim mname As String
+        Dim sname As String
+        Dim found As Boolean
+        found = False
+        Do
+
+            Console.WriteLine("Enter member name to search for")
+            sname = Console.ReadLine
+            FileOpen(1, "c:\pg\mdata.txt", OpenMode.Input)
+
+            While Not EOF(1)
+
+                Input(1, mid)
+                Input(1, mname)
+                If sname = mname Then
+                    found = True
+                    Console.WriteLine("member id :" & mid)
+                    Console.WriteLine("member name :" & mname)
+                End If
+            End While
+            FileClose(1)
+            If found = False Then Console.WriteLine("member not found")
+        Loop
+        Console.ReadKey()
